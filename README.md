@@ -16,7 +16,15 @@ The program adds up all the items to get a subtotal, and if the subtotal is 100 
    - Total
 ---
 
-EXAMPLE from the code
+ - subtotal = add_line(subtotal, price, qty) -- This line updates the subtotal by adding the price × quantity of the item you just entered. It calls the function add_line from core.py to keep the math separate from the input/output.
+ - if name == "": break --  checks if the user pressed Enter without typing an item name, and If yes, the loop stops and the program goes to print the receipt.
+ - discount = compute_discount(subtotal) -- it calls a function that decides if a 10% discount should be appl
+ - taxable = subtotal - discount --  means that the tax is calculated after subtracting the discount, but not on the full subtotal.
+ - print(f"Subtotal: ${format_money(subtotal)}")  -- the f"" part is called an f-string, it makes it easy to put numbers inside text, and the function format_money makes sure that the number always has 2 decimals, like 7.40.
+
+
+---
+EXAMPLE the result I got from the code
 
 Item name (blank for finish): water
 Unit price: 50
