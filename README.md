@@ -45,12 +45,9 @@ HERE IS THE CODE
 
 from core import add_line, compute_discount, compute_tax, format_money
 
-
 def run_checkout():
     subtotal = 0.0
     item_count = 0
-
-
 
     while True:
         name = input("Item name (blank for finish): ").strip()
@@ -81,6 +78,8 @@ def run_checkout():
 
 if __name__ == "__main__":
     run_checkout()
+
+    
 ---
 # core.py
 
